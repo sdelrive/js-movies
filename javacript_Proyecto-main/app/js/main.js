@@ -36,11 +36,6 @@ let peliculas = [
 
 let misPeliculas = [
 
-
-            // esto lo dejo como prueba para no andar ingresando peliculas
-            // { id: 2, nombre: "Intelestelar", genero: "Ciencia Ficcion", director: "Nolan", año: "2011", estrellas: "", img:("https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg")},
-            // { id: 3, nombre: "Joker", genero: "Suspenso", director: "Todd Phillips", año: "2019", estrellas: "", img:("https://pics.filmaffinity.com/Joker-790658206-large.jpg")},
-            // { id: 4, nombre: "The Green Knight", genero: "Fantasía", director: "David Lowery", año: "2021", estrellas: "", img:("https://upload.wikimedia.org/wikipedia/en/0/09/The_Green_Knight_poster.jpeg")},
     
     ];
 

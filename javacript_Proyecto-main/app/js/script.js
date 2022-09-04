@@ -14,7 +14,7 @@ misPelis = catalogoMisPeliculas;        // No sé por qué tengo que hacer esto.
 listaUsuario(); //Pega el nombre de usuario en "Lista de ${userName}"
 
 
-pegarLista(catalogoPeliculas.peliculas);
+pegarLista(peliculas);
 
 
 //Añado los eventos a los botones de navegación.
@@ -23,7 +23,7 @@ miListado.addEventListener('click',()=>{
 });
 
 lista.addEventListener('click',()=>{
-    pegarLista(catalogoPeliculas.peliculas);
+    pegarLista(peliculas);
     chequearAgregado();
 });
 
@@ -55,7 +55,7 @@ function pegarLista(catalogo){
         }
 
         // Función para agregar los eventos a los botones de cada pelicula.
-    for(let i=1;i<catalogoPeliculas.peliculas.length;i++){
+    for(let i=1;i<peliculas.length;i++){
         let element = peliculas[i-1];
         let string = `btn${i}`;
         botonListener(string,element);
