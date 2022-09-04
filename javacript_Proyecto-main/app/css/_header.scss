@@ -1,0 +1,40 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: black;
+    position: sticky;
+    top: 0px;
+
+    &_title{
+        text-decoration: none;
+        color: red;
+        font-weight: bold;
+        font-size: 130%;
+        margin: 30px;
+    }
+
+    &-nav{
+        display: flex; 
+        // margin: 30px;       // align-items: center;
+    }
+
+    &-nav-op{
+
+           
+        margin: 30px;
+        text-decoration: none;
+        list-style: none;
+        color: white;
+        &:hover{
+            color:red;
+        }
+        &_title{
+            text-decoration: none;
+            color: red;
+            font-weight: bold;
+            font-size: 130%;
+        }
+    }
+}

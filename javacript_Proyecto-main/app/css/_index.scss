@@ -1,0 +1,188 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    // background-color:whitesmoke;
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+
+    
+}
+.title{
+    grid-area: title;
+    text-align: center;
+    margin-bottom: 10vh;
+}
+.layout-store{  
+    // width: 100%;
+    margin: 10%;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto  
+    auto;
+    grid-template-areas:
+    "title title" 
+    "art0 art1"
+    "art2 art3"
+    "art4 art5"
+    ;
+
+
+
+>div{
+    height: 60vh;
+}
+> div div img{
+    width: 150px;
+    border-radius: 5%;
+}}
+
+
+
+.stylesFilm{
+    background-color: whitesmoke;}
+
+
+.nombre{
+    margin: 0% 10% 10% 10%;
+    
+}
+.button-disabled{
+    &:disabled{
+        background-color: gray;
+        cursor: not-allowed;
+        color: black;
+        &:hover{
+            color: black;
+        }
+    &:active{
+        transform: scale(1);
+
+        }
+    }
+
+}
+.button{
+    background-color: black;
+    color: white;
+    margin-top: auto;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+
+    &:hover{
+        color: red;
+    }
+
+    &:active{
+        transform: scale(0.95);
+    }
+
+    &:focus{
+        outline: 0;
+    }
+}
+
+
+
+.art{
+    margin: 10px 10% 10vh 30%;
+    height: auto;
+    width: 200px;
+    border-radius: 5%;
+    padding: 10px;
+    box-shadow: 5px 1px 30px 1px #888888;
+}
+.art0{
+    grid-area: art0;
+}
+.art1{
+    grid-area: art1;
+}
+
+.art2{
+    grid-area: art2;
+}
+
+.art3{
+    grid-area: art3;
+}
+
+.art4{
+    grid-area: art4;
+}
+
+.art5{
+    grid-area: art5;
+}
+
+
+
+
+
+
+// flexbox classes
+.flex{
+    display: flex;
+    flex-direction: column;
+
+    &-jc-sb{
+        justify-content: space-between;
+    }
+    &-jc-sa{
+        justify-content: space-around;
+    }
+    &-jc-c{
+        justify-content: center;
+    }
+    &-ai-c{
+        align-items: center;
+    }
+}
+
+
+
+
+@media screen and (max-width: 700px){
+    .layout-store{  
+        // width: 100%;
+        display: grid;
+        margin: 20%;
+        grid-template-columns: 100%;
+        grid-template-rows: auto   
+        auto;
+        grid-template-areas: 
+        "title"
+        "art0" 
+        "art1"
+        "art2"
+        "art3"
+        "art4" 
+        "art5"
+        ;
+    }
+}
+
+.removeFilm{
+    button{
+        margin-top:-500%; 
+        margin-left:200%;
+        background-color:whitesmoke;
+        border: none;
+        color:rgb(173, 10, 10);
+
+        &:active{
+            transform: scale(0.95);
+        }
+    }
+   
+    
+}
