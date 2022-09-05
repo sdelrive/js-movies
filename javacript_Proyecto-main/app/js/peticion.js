@@ -21,6 +21,7 @@ let misPelis = []
 
 getMovies(API_URL);
 
+    //funcion que trae las pelis, las lista y anade eventos a los botones "peliculas" y "mis peliculas"
 function getMovies(url){
 
     fetch(url)
@@ -40,7 +41,7 @@ function getMovies(url){
      });
 }
 
-
+    // funcion que lista todas las peliculas
 function showMovies(data){
     main.innerHTML ='';
 
@@ -72,7 +73,7 @@ function showMovies(data){
     })
  
 }
-
+    //funcion que agrega el evento al boton de agregar a mi lista
 function botonListener(string,element){
     let btn = document.getElementById(string);
     btn.addEventListener('click', () =>{
@@ -92,7 +93,7 @@ function botonListener(string,element){
 }
 
 
-
+    //funcion que lista unicamente mi lista de peliculas
 function pegarMiLista(catalogo){
     layout.innerHTML = " ";     //Primero borro todo lo que haya
 
@@ -123,6 +124,7 @@ function pegarMiLista(catalogo){
 
 }
 
+    //funcion que le asigna el evento al boton de eliminar de mi lista
 function eventEliminarMiLista(string,element){
     let btn = document.getElementById(string);
     btn.addEventListener('click', () =>{
@@ -152,7 +154,7 @@ function chequearAgregado(data){
             }
     })
 }
-
+    // funcion que agrega el disabled a pelis ya agregadas en mi lista
 function agregarDisabled(boton){
     boton.classList.add("button-disabled");
     boton.setAttribute("disabled", "true");
