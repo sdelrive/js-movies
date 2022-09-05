@@ -4,8 +4,16 @@ const miListado = document.getElementById("miListado");
 const lista = document.getElementById("listado");
 const btns = document.getElementsByClassName("button");
 
+
+
+
+
+
+
+
+pegarLista(peliculas)
 listaUsuario(); //Pega el nombre de usuario en "Lista de ${userName}"
-pegarLista(peliculas);
+// pegarLista(peliculas);
 
     //Añado los eventos a los botones de navegación.
 miListado.addEventListener('click',()=>{
@@ -71,12 +79,17 @@ function pegarMiLista(catalogo){
                         </div>`;
             
     }
-
-    for(let i=1;i<=misPelis.length;i++){
-        let element = misPelis[i-1];
-        let string = `rmvFilm${i}`;
-        eventEliminarMiLista(string,element);
-    };
+    if(misPelis.length>0){
+        for(let i=1;i<=misPelis.length;i++){
+            let element = misPelis[i-1];
+            let string = `rmvFilm${i}`;
+            eventEliminarMiLista(string,element);
+        };
+        // misPelis.forEach( el =>{
+        //     eventEliminarMiLista('rmvFilm${el.id}',el)
+        // })
+    }
+   
 
 }
 
@@ -84,10 +97,8 @@ function eventEliminarMiLista(string,element){
     let btn = document.getElementById(string);
     btn.addEventListener('click', () =>{
         // console.log(element)
-        misPelis = misPelis.filter(peli => 
+         misPelis = misPelis.filter(peli => 
             peli.id != element.id)
-
-        pegarMiLista(misPelis);   //Le pego un array de objetos
 
         Swal.fire({
             position: 'top-end',
@@ -96,6 +107,8 @@ function eventEliminarMiLista(string,element){
             showConfirmButton: false,
             timer: 1500
           })
+          pegarMiLista(misPelis);   //Le pego un array de objetos
+
     })
 
 }
@@ -154,4 +167,3 @@ function listaUsuario(){
     const listaUsuario = document.getElementById("miListado");
     listaUsuario.innerHTML=`Lista de ${localStorage.getItem("userName")}`
 }
-

@@ -4,7 +4,6 @@ const btnLogin = document.getElementById("btnLogin");
 const layout = document.querySelector(".layout-store");
 
 
-
   //Evento para el boton de Ingresar
 btnLogin.addEventListener("click",()=>{
     inputData();
@@ -40,7 +39,6 @@ function chequeoDatos(el){
 
   function indexRedirect(){
 
-    // alert("sii");
     window.location.href = './pelis.html';
 
   };

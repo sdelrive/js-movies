@@ -162,6 +162,7 @@ body {
   display: flex;
 }
 .header-nav-op {
+  cursor: pointer;
   margin: 30px;
   text-decoration: none;
   list-style: none;
