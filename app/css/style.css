@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -17,18 +18,10 @@ body {
 
 .layout-store {
   margin: 10vh;
-  cursor: pointer;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 10vw;
-}
-.layout-store > div {
-  height: 60vh;
-}
-.layout-store > div div img {
-  width: 150px;
-  border-radius: 5%;
 }
 
 .stylesFilm {
@@ -51,6 +44,10 @@ body {
   transform: scale(1);
 }
 
+.card__title {
+  text-align: center;
+}
+
 .nombre {
   height: 20%;
 }
@@ -58,7 +55,8 @@ body {
 .button {
   background-color: black;
   color: white;
-  margin-top: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
@@ -75,11 +73,9 @@ body {
 }
 
 .art {
-  height: auto;
-  max-height: 450px;
+  cursor: pointer;
   width: 250px;
   border-radius: 5%;
-  padding: 10px;
   transition: 150ms ease-in-out;
 }
 
@@ -104,15 +100,30 @@ body {
   align-items: center;
 }
 
-.removeFilm button {
-  margin-top: -500%;
-  margin-left: 200%;
-  background-color: whitesmoke;
-  border: none;
-  color: rgb(173, 10, 10);
+.art_img {
+  width: 250px;
+  height: auto;
+  margin-bottom: 15px;
 }
-.removeFilm button:active {
+
+.removeFilm {
+  background-color: black;
+  color: white;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 150ms ease-in-out;
+}
+.removeFilm:hover {
+  background-color: rgb(174, 16, 16);
+}
+.removeFilm:active {
   transform: scale(0.95);
+}
+.removeFilm:focus {
+  outline: 0;
 }
 
 .header {

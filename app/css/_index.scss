@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
     
 }
 
@@ -22,19 +23,13 @@ body{
 .layout-store{  
     // width: 100%;
     margin: 10vh;
-    cursor: pointer;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 10vw;
 
->div{
-    height: 60vh;
+
 }
-> div div img{
-    width: 150px;
-    border-radius: 5%;
-}}
 
 
 
@@ -61,6 +56,9 @@ body{
     }
 
 }
+.card__title{
+    text-align: center;
+}
 
 .nombre{
     height: 20%;
@@ -68,7 +66,10 @@ body{
 .button{
     background-color: black;
     color: white;
-    margin-top: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+    // margin-top: auto;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
@@ -91,11 +92,12 @@ body{
 
 .art{
     // margin: 10px 10% 10vh 30%;
-    height: auto;
-    max-height: 450px;
+    cursor: pointer;
+    // height: auto;
     width: 250px;
+    // max-height: 450px;
     border-radius: 5%;
-    padding: 10px;
+    // padding: 10px;
     transition: 150ms ease-in-out;
 }
 .art:hover{
@@ -125,23 +127,38 @@ body{
         align-items: center;
     }
 }
-
-
-
+.art_img{
+     width: 250px;
+     height: auto;
+    margin-bottom: 15px;
+}
 
 
 
 .removeFilm{
-    button{
-        margin-top:-500%; 
-        margin-left:200%;
-        background-color:whitesmoke;
-        border: none;
-        color:rgb(173, 10, 10);
+    background-color: black;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
 
-        &:active{
-            transform: scale(0.95);
-        }
+    // margin-top: auto;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+
+    &:hover{
+        background-color: rgb(174, 16, 16);
+        
+    }
+    
+    &:active{
+        transform: scale(0.95);
+    }
+
+    &:focus{
+        outline: 0;
+    
     }
    
     

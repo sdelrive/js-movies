@@ -51,14 +51,13 @@ function showMovies(data){
         const movieEl = document.createElement('div'); 
         movieEl.classList.add("stylesFilm", "art", "flex", "flex-ai-c", "flex-jc-c");
         movieEl.innerHTML = `
-        <div class = "nombre eachStylesFilm" >
-            <h2>${title}</h2>
+      
         </div>
-        <div class="eachStylesFilm">
+        <div class="img">
             <img class="art_img" src=${IMG_URL+poster_path}>
         </div>
-        <div class="eachStylesFilm">
-             <p><b>Año:</b> ${release_date}</p>
+        <div class="eachStylesFilm card__title">
+             <p>${title}</p>
         </div>
         <button id="btn${id}" class="button btn${id}" >Mi lista</button>
         `
@@ -101,17 +100,15 @@ function pegarMiLista(catalogo){
         const {title, poster_path, vote_average, overview,release_date,id} = pelicula;
 
         layout.innerHTML += `<div class="stylesFilm art flex flex-ai-c flex-jc-c" > 
-        <div id="rmvFilm${id}"  class="removeFilm"><button><i class="gg-remove"></i></button></div>
-                            <div class = "nombre eachStylesFilm" >
-                                <h2>${title}</h2>
-                            </div>
+        
                             <div class="eachStylesFilm">
                                 <img class="art_img" src=${IMG_URL+poster_path}>
                             </div>
-                            <div class="eachStylesFilm">
-                                <p><b>Año:</b> ${release_date}</p>
+                            <div class="eachStylesFilm card__title">
+                                <p>${title}</p>
                             </div>
-                        
+                            <button id="rmvFilm${id}" class=" removeFilm btn${id}" >Quitar</button>
+
                             </div>`;
             
     }
